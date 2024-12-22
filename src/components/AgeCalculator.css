@@ -1,0 +1,104 @@
+/* Apply Gradient Background to Entire Page */
+body {
+    background: linear-gradient(to right, #005bea, #00c6fb);
+    color: #ffffff; /* Ensure text remains readable */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Optional: Add padding or spacing adjustments for better visuals */
+.container {
+    padding: 20px;
+}
+
+/* Enhanced Header and Footer with Gradient Background */
+.header, .footer {
+    background: linear-gradient(to right, #000000, #434343);
+    color: var(--text-primary, #ffffff); /* Default to white if --text-primary is not defined */
+    padding: 1rem;
+    text-align: center;
+    position: sticky;
+    z-index: 100;
+}
+
+.header {
+    top: 0;
+}
+
+.footer {
+    bottom: 0;
+}
+
+/* Header Links */
+.header a {
+    color: #ffffff; /* Text color for better contrast on gradient */
+    text-decoration: none;
+    margin: 0 1rem;
+    transition: color 0.3s ease; /* Unified animation timing */
+}
+
+.header a:hover {
+    color: #d1d5db; /* Lighter hover effect */
+}
+
+/* Footer Social Icons */
+.footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer .social-icons a {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    background: #ffffff; /* Contrast background for icons */
+    color: #005bea;
+    border-radius: 50%;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+    transform: scale(1.1);
+    background: #00c6fb; /* Gradient color complement */
+}
+
+/* Theme Selector Gradient Background */
+.theme-selector {
+    background: linear-gradient(to right, #000000, #434343);
+    border-radius: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    display: inline-flex; /* Center the theme selector content */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Cards with Gradient Background */
+.result-card {
+    background: linear-gradient(to right, #000000, #434343);
+    color: #ffffff; /* Text color for better contrast */
+    border-radius: 0.5rem; /* Smooth card edges */
+    padding: 1rem;
+    animation: floatIn 0.5s ease-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.result-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Keyframe Animation for Card Float-In Effect */
+@keyframes floatIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
